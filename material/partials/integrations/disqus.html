@@ -1,0 +1,29 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% set disqus = config.extra.disqus %}
+{% if page and page.meta and page.meta.disqus is string %}
+  {% set disqus = page.meta.disqus %}
+{% endif %}
+{% if not page.is_homepage and disqus %}
+<h2 id="__comments" data-no-instant="">Comments</h2> 
+  <form id="gitalk-form" onsubmit="return!1" data-no-instant=""> 
+    <div id="gitalk-container" data-no-instant=""> </div> 
+  </form> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.css"> 
+  <script src="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.min.js">
+  </script> 
+  <script> 
+    const gitalk = new Gitalk({
+      id: location.href,
+      owner: 'rwplus',
+      repo: 'docs',
+      admin: ['weekndCN'],
+      clientID: '3f5d8b36d1f9e59efc18',
+      clientSecret: '0d59f5a070cae76c07a1164d629089428d6202e7',
+      distractionFreeMode: false,
+      pagerDirection: 'first'
+    })
+    gitalk.render('gitalk-container') 
+  </script> 
+{% endif %}

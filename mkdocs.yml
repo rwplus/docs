@@ -1,0 +1,126 @@
+site_name: ''
+repo_url: https://github.com/rwplus/docs
+edit_uri: ''
+site_description: 'Oracle，Mysql，Arduino，Jenkins，Kubernetes，Vue，ES6，Vuetify，Postgres，Docker，Java，Python，EFK/ELK，Linux，Kafka，Redis…….'
+copyright: Copyright © 2020 rwplus
+
+
+theme:
+  name: material
+  nav_style: light
+  custom_dir: material
+  highlightjs: true
+  include_search_page: false
+  search_index_only: true
+  logo: assets/128x128@text.png
+  favicon: assets/128x128@text.png
+  language: zh
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    #- navigation.instant
+  palette:
+    scheme: slate
+    primary: black
+    accent: black
+  font:
+    text: Josefin Sans
+    code: Roboto Mono
+
+
+nav:
+  - Home: index.md
+  - Docker:
+    - Dockerfile最佳实践: container/DockerfileBestPratice.md
+  - Kubernetes:
+    - Best Practise: BestPractise.md
+  - Calico:
+    - Best Practise: BestPractise.md
+  - Logs:
+    - Best Practise: Logs.md
+  - Prometheus:
+    - introduction:
+      - overview: prometheus/introduction/Overview.md
+      - FAQ: prometheus/introduction/FAQ.md
+      - glossary: prometheus/introduction/Glossary.md
+    - concepts:
+      - Data Model: prometheus/concepts/DataModel.md
+      - Metric Types: prometheus/concepts/MetricTypes.md
+      - Jobs And Instances: prometheus/concepts/JobsAndInstances.md
+  - Changelog:
+    - Changelog: changelog/changelog.md
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+    
+
+extra:
+  disqus: 'something'
+  extra_css:
+    - stylesheets/overrides.min.css
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rwplus/docs
+      name: documents
+    - icon: fontawesome/brands/docker
+      link: mailto:weeknd.su@gmail.com
+      name: docker Hub
+    - icon: fontawesome/brands/weixin
+      link: https://github.com/rwplus/doc
+      name: wechat
+    - icon: fontawesome/brands/dochub
+      link: https://github.com/rwplus/doc
+      name: doc Hub
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:weeknd.su@gmail.com
+      name: contactUs
+
+plugins:
+  - search:
+      lang:
+        - en
+        - ja
+
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
