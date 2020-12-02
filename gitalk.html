@@ -10,12 +10,12 @@
   <form id="gitalk-form" onsubmit="return!1" data-no-instant=""> 
     <div id="gitalk-container" data-no-instant=""> </div> 
   </form> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.css"> 
-  <script src="https://cdn.jsdelivr.net/gh/OI-wiki/gitalk@master/dist/gitalk.min.js">
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> 
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js">
   </script> 
   <script> 
     const gitalk = new Gitalk({
-      id: location.href,
+      id: decodeURI(window.location.pathname),
       owner: 'rwplus',
       repo: 'docs',
       admin: ['weekndCN'],
