@@ -14,5 +14,6 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: cp gitalk.html /opt/hostedtoolcache/Python/3.9.0/x64/lib/python3.9/site-packages/material/partials/integrations/disqus.html
+      - run: more /opt/hostedtoolcache/Python/3.9.0/x64/lib/python3.9/site-packages/material/partials/integrations/disqus.html
       - run: mkdocs gh-deploy --force
 
